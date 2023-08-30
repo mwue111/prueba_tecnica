@@ -13,14 +13,14 @@
 
     </form>
 
-    <table>
+    <table class="table table-hover">
         <thead>
-            <th>Razón social</th>
-            <th>CIF</th>
-            <th colspan="3">Dirección</th>
-            <th>Fecha inicio del contrato</th>
-            <th>Fecha fin del contrato</th>
-            <th colspan="2">Acciones</th>
+            <th scope="col">Razón social</th>
+            <th scope="col">CIF</th>
+            <th scope="col" colspan="3">Dirección</th>
+            <th scope="col">Fecha inicio del contrato</th>
+            <th scope="col">Fecha fin del contrato</th>
+            <th scope="col" colspan="2">Acciones</th>
         </thead>
         <tbody>
             @foreach($clients as $client)
