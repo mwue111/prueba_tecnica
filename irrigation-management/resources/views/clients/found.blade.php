@@ -1,8 +1,10 @@
 <x-layout>
     @if(session('message'))
-        <h1>
-            {{ session('message') }}
-        </h1>
+        <div class="message">
+            <p>
+                {{ session('message') }}
+            </p>
+        </div>
     @endif
 
     @if($clients)
@@ -51,11 +53,12 @@
         </tbody>
     </table>
 
+    {{ $clients->links() }}
+
     @else
-        <p>No se han encontrado resultados.</p>
+        <p class="clients-not-found">No se han encontrado resultados.</p>
     @endif
 
-    {{ $clients->links() }}
 
     <x-link url="{{ url()->previous() }}">Volver</x-link>
 </x-layout>

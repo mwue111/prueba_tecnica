@@ -9,7 +9,8 @@ a, a:hover{
     padding: 30px;
     border-radius: 15px;
     color: white;
-    top: 270px;
+    bottom: 19px;
+    left: 20px;
 }
 
 .home-container{
@@ -90,6 +91,13 @@ table{
     color: #569db3;
 }
 
-/* .panel{
-    background-color: red;
-} */
+.clients-not-found{
+    background-color: #78cfdb;
+    color: white;
+    padding: 50px;
+    text-align: center;
+    font-weight: bolder;
+    width: 50%;
+    margin: 10px auto;
+    border-radius: 15px;
+}

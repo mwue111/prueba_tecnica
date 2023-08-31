@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Client;
+use Illuminate\Support\Facades\Session;
 
 class SearchController extends Controller
 {
@@ -16,4 +17,6 @@ class SearchController extends Controller
 
         return view('clients.found', ['clients' => $clients]);
     }
+
+
 }

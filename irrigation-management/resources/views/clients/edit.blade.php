@@ -6,6 +6,7 @@
             <form action="{{ route('client.update', $client->id) }}" method="POST" enctype="multipart/form-data">
             @csrf
             @method('PUT')
+                <input type="hidden" name="previous_url" value="{{ url()->previous() }}">
 
                 <x-form.input name="name" label="Razón social" :data="$client->name" required />
 
