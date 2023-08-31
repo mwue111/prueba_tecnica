@@ -75,8 +75,8 @@ class ClientController extends Controller
         $client = Client::findOrFail($id);
 
         $attributes = $request->validate([
-            'name' => 'required|unique:clients,name,' . $client->id,
-            'cif' => 'required|unique:clients,cif, ' . $client->id,
+            'name' => 'required|max:200|unique:clients,name,' . $client->id,
+            'cif' => 'required|max:10|min:9|regex:/^[A-Za-z]\d{8}$/|unique:clients,cif, ' . $client->id,
             'address' => 'required|max:100',
             'city' => 'required',
             'town' => 'required',
