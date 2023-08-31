@@ -1,6 +1,7 @@
 <x-layout>
+    <x-form.panel>
         @if($client)
-        <h1>Editar {{$client->name}}</h1>
+        <h1 id="edit-client-title" class="mb-4">Editar {{$client->name}}</h1>
             <!-- formulario de edición -->
             <form action="{{ route('client.update', $client->id) }}" method="POST" enctype="multipart/form-data">
             @csrf
@@ -20,11 +21,12 @@
 
                 <x-form.date name="end_contract" label="Fecha fin de contrato" :data="$client->end_contract"/>
 
-                <x-form.button>Guardar</x-form>
+                <x-form.button class="bg-info text-white uppercase font-semibold text-xs py-3 px-10 rounded-2xl hover:bg-blue-600 mt-4">Guardar</x-form>
 
                 <x-link url="{{ url()->previous() }}">Volver</x-link>
             </form>
         @else
             <p>No se ha encontrado al cliente.</p>
         @endif
+    </x-panel>
 </x-layout>

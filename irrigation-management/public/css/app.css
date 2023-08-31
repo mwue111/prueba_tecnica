@@ -82,3 +82,14 @@ table{
 .client-link:hover {
     color: #478294;
 }
+
+#edit-client-title,
+#create-client-title{
+    font-size: 30px;
+    font-weight: bolder;
+    color: #569db3;
+}
+
+/* .panel{
+    background-color: red;
+} */
