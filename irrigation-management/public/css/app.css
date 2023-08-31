@@ -1,0 +1,84 @@
+a, a:hover{
+    text-decoration: none;
+}
+
+.message{
+    position: absolute;
+    z-index: 99;
+    background-color: #78cfdb;
+    padding: 30px;
+    border-radius: 15px;
+    color: white;
+    top: 270px;
+}
+
+.home-container{
+    padding: 10px;
+    border-radius: 50%;
+}
+
+#home{
+    width: 40px;
+    height: 40px;
+}
+
+.home-container:hover{
+    /* background-color: #569db3; */
+    background-color: rgb(224, 224, 224);
+}
+
+.nav-container{
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 0;
+    border-radius: 15px;
+    border: 1px solid lightgray;
+}
+
+.nav-container h2{
+    font-size: 20px;
+    margin-top: 1%;
+    font-weight: bolder;
+    color: #569db3;
+}
+
+#search-icon{
+    width: 24px;
+    height: 24px;
+}
+
+#add-client-form{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.edit-button,
+.delete-button{
+    width: 20px;
+    height: 20px;
+}
+
+.edit-button-container,
+.delete-button-container{
+    padding: 5px;
+    border-radius: 100%;
+}
+.edit-button-container:hover,
+.delete-button-container:hover{
+    background-color: white;
+}
+
+table{
+    text-align: center;
+}
+
+.client-link{
+    font-weight: bolder;
+    color:#569db3;
+}
+
+.client-link:hover {
+    color: #478294;
+}

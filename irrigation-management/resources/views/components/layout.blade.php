@@ -12,22 +12,35 @@
     <!-- tailwind -->
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
 
+    <!-- css -->
+    <link rel="stylesheet" type="text/css" href="{{ asset('/css/app.css') }}" />
+
     <title>Prueba técnica</title>
 </head>
 
 <body>
-    <!-- barra navegación -->
-    <nav>
-        <ul>
-            <li>
-                <a href="{{route('clients.index')}}">Home</a>
-            </li>
-        </ul>
-    </nav>
+    <div class="container">
+        <!-- barra navegación -->
+        <nav class="navbar navbar-light bg-light">
+            <a class="navbar-brand" href="{{route('clients.index')}}">
+                <div class="home-container">
+                    <img
+                        id="home"
+                        src="{{asset('/assets/images/home.png')}}"
+                        alt="Home"
+                    >
+                </div>
+            </a>
+        </nav>
 
-    <!-- buscador -->
-    <x-search/>
+        <div class="nav-container">
+            <!-- buscador -->
+            <h2>Buscar clientes</h2>
+            <x-search/>
+        </div>
 
-    {{ $slot }}
+        {{ $slot }}
+
+    </div>
 
 </body>

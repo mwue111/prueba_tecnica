@@ -30,7 +30,7 @@ Route::get('/editar-cliente/{id}', [ClientController::class, 'edit'])->name('cli
 Route::put('/actualizar-cliente/{id}', [ClientController::class, 'update'])->name('client.update');
 Route::get('/crear-cliente', [ClientController::class, 'create'])->name('client.create');
 Route::post('/guardar-cliente', [ClientController::class, 'store'])->name('client.store');
-Route::get('/buscar-cliente', [SearchController::class, 'search'])->name('client.search');
+Route::get('/buscar-cliente}', [SearchController::class, 'search'])->name('client.search');
 
 //programadores de riego
 Route::get('/riego', [IrrigationController::class, 'index'])->name('irrigations.index');
