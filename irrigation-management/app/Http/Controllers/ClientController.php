@@ -35,8 +35,8 @@ class ClientController extends Controller
 
         $attributes = $request->validate([
             'code' => 'required|unique:clients,code',
-            'name' => 'required|unique:clients,name',
-            'cif' => 'required|unique:clients,cif',
+            'name' => 'required|max:200|unique:clients,name',
+            'cif' => 'required|min:9|max:10|regex:/^[A-Za-z]\d{8}$/|unique:clients,cif',
             'address' => 'required|max:100',
             'city' => 'required',
             'town' => 'required',
