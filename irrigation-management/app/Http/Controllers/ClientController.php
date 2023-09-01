@@ -56,7 +56,13 @@ class ClientController extends Controller
     public function show(string $id)
     {
         $client = client::findOrFail($id);
-        return view('clients.show', ['client' => $client]);
+        $irrigations = $client->irrigations;
+
+        if(!$irrigations->count()){
+            $irrigations = null;
+        }
+
+        return view('clients.show', ['client' => $client, 'irrigations' => $irrigations]);
     }
 
     /**
