@@ -1,4 +1,10 @@
 <x-layout>
+    <x-search
+            route="irrigation.search"
+            param="{{ $client_id }}"
+            title="programadores de riego"
+            suggestion="Modelo"
+    />
 
     @if($irrigations)
     <table class="table table-hover">
@@ -24,5 +30,7 @@
     @else
         <p>No hay programadores de riego de ese modelo asociados a {{ $client->name }}</p>
     @endif
+
+    <x-link url="{{ url()->previous() }}">Volver</x-link>
 
 </x-layout>

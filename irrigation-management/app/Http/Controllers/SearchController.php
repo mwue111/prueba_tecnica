@@ -34,7 +34,7 @@ class SearchController extends Controller
             $irrigations = null;
         }
 
-        return view('irrigations.found', ['irrigations' => $irrigations]);
+        return view('irrigations.found', ['irrigations' => $irrigations, 'client_id' => $clientId]);
     }
 
 }
