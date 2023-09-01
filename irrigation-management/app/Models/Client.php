@@ -23,6 +23,7 @@ class Client extends Model
 
     //función para búsqueda
     public function scopeFilter($query, array $filters) {
+        // dd($query);
         if(isset($filters['search'])) {
             $query
                     ->where('name', 'LIKE', '%' . $filters['search'] . '%')

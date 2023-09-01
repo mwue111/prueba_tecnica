@@ -10,7 +10,9 @@ use Illuminate\Support\Facades\Session;
 class SearchController extends Controller
 {
     public function search(Request $request) {
-        $clients = Client::latest()->filter(request(['search']))->paginate(10);
+        $clients = Client::latest()
+                    ->filter(request(['search']))
+                    ->paginate(10);
 
         if(!$clients->count()){
             $clients = null;
@@ -23,9 +25,14 @@ class SearchController extends Controller
         $clientId = $request->input('client_id');
         $searchModel = $request->input('search');
 
-        $irrigations = Irrigation::where('client_id', $clientId)
-        ->where('model', 'like', '%' . $searchModel . '%')
-        ->get();
+        $irrigations = Client::findOrFail($clientId)
+                        ->irrigations()
+                        ->where('model', 'LIKE', '%' . $searchModel . '%')
+                        ->get();
+
+        if(!$irrigations->count()){
+            $irrigations = null;
+        }
 
         return view('irrigations.found', ['irrigations' => $irrigations]);
     }

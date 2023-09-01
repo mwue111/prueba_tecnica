@@ -2,8 +2,7 @@
 
 <x-panel class="search-container">
     <h2>Buscar {{ $title }}</h2>
-    <form class="form-inline mb-4" method="GET" action="{{ route($route), $param }}">
-
+    <form class="form-inline mb-4" method="GET" action="{{ route($route) }}">
         @csrf
             <input
                 class="form-control mr-sm-2"
