@@ -43,4 +43,10 @@
 
     </div>
 
+    <footer>
+        <div class="footer">
+            María Daniela Wuerich, 2023.
+        </div>
+    </footer>
 </body>
+
