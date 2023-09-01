@@ -101,3 +101,27 @@ table{
     margin: 10px auto;
     border-radius: 15px;
 }
+
+.pagination li a
+{
+    background-color: white;
+    color: #478294;
+}
+
+
+.page-link:focus{
+    background-color: #478294;
+    color: white;
+}
+
+.page-link:hover{
+    background-color: #569db3;
+    color: white;
+}
+
+.page-item.active .page-link {
+    z-index: 1;
+    color: #fff;
+    background-color: #478294;
+    border-color: #3a6b7a;
+}

@@ -6,7 +6,6 @@ use Illuminate\Http\Request;
 use App\Models\Client;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Str;
-use Illuminate\Support\Facades\Session;
 
 class ClientController extends Controller
 {
@@ -15,7 +14,7 @@ class ClientController extends Controller
      */
     public function index()
     {
-        $clients = client::latest('updated_at')->paginate(10);
+        $clients = client::latest('updated_at')->paginate(3);
         return view('clients.index', ['clients' => $clients]);
     }
 

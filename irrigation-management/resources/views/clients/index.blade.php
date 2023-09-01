@@ -25,7 +25,7 @@
                 <th scope="col">Fecha inicio del contrato</th>
                 <th scope="col">Fecha fin del contrato</th>
                 <th scope="col">Editar cliente</th>
-                <!-- <th scope="col" colspan="2">Acciones</th> -->
+                {{-- <th scope="col" colspan="2">Acciones</th> --}}
             </thead>
             <tbody>
                 @foreach($clients as $client)
@@ -55,7 +55,7 @@
                                 </x-form.button>
                             </form>
                         </td>
-                        <!-- <td>
+                        {{-- <td>
                             <form action="#" METHOD="POST">
                             @csrf
                             @method('DELETE')
@@ -68,7 +68,7 @@
                                     </div>
                                 </x-form.button>
                             </form>
-                        </td> -->
+                        </td> --}}
                     </tr>
 
                 @endforeach
