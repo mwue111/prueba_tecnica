@@ -28,7 +28,7 @@ a, a:hover{
     background-color: rgb(224, 224, 224);
 }
 
-.nav-container{
+.search-container{
     padding: 10px;
     display: flex;
     flex-direction: column;
@@ -38,9 +38,10 @@ a, a:hover{
     border: 1px solid lightgray;
 }
 
-.nav-container h2{
+.search-container h2{
     font-size: 20px;
     margin-top: 1%;
+    margin-bottom: 1%;
     font-weight: bolder;
     color: #569db3;
 }

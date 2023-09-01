@@ -34,6 +34,7 @@ Route::get('/buscar-cliente', [SearchController::class, 'search'])->name('client
 
 //programadores de riego
 Route::get('/riego', [IrrigationController::class, 'index'])->name('irrigations.index');
+Route::get('/buscar-riego', [SearchController::class, 'searchIrrigation'])->name('irrigation.search');
 
 //sensores/sondas
 Route::get('/sonda', [SensorController::class, 'index'])->name('sensors.index');

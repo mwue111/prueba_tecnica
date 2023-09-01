@@ -7,6 +7,12 @@
         </div>
     @endif
 
+    <x-search
+            route="client.search"
+            title="clientes"
+            suggestion="Razón social/municipio"
+    />
+
     @if($clients)
 
     <table class="table table-hover">

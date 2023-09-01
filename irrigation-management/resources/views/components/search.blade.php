@@ -1,5 +1,9 @@
-<x-panel>
-    <form class="form-inline" method="GET" action="{{ route('client.search') }}">
+@props(['route', 'title', 'suggestion', 'param' => null])
+
+<x-panel class="search-container">
+    <h2>Buscar {{ $title }}</h2>
+    <form class="form-inline mb-4" method="GET" action="{{ route($route), $param }}">
+
         @csrf
             <input
                 class="form-control mr-sm-2"
@@ -7,9 +11,11 @@
                 type="text"
                 name="search"
                 id="search"
-                placeholder="Razón social/municipio"
+                placeholder="{{ $suggestion }}"
                 value="{{ request('search') }}"
             >
+
+            <input type="hidden" name="client_id" value="{{ $param }}">
 
             <x-form.button class="btn btn-outline-info text-info hover:bg-gray-200 my-sm-0 ">
                 <img

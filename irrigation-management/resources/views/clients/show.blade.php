@@ -1,4 +1,12 @@
 <x-layout>
+
+    <x-search
+            route="irrigation.search"
+            param="{{ $client->id }}"
+            title="programadores de riego"
+            suggestion="Modelo"
+    />
+
     @if($irrigations)
     <table class="table table-hover">
         <thead>

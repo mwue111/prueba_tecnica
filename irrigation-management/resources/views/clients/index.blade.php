@@ -8,6 +8,12 @@
         </div>
         @endif
 
+        <x-search
+            route="client.search"
+            title="clientes"
+            suggestion="Razón social/municipio"
+        />
+
         @if($clients)
 
         <form id="add-client-form" class="mb-4" action="{{ route('client.create') }}" method="GET">

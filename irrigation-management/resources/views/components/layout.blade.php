@@ -33,12 +33,6 @@
             </a>
         </nav>
 
-        <div class="nav-container">
-            <!-- buscador -->
-            <h2>Buscar clientes</h2>
-            <x-search/>
-        </div>
-
         {{ $slot }}
 
     </div>
