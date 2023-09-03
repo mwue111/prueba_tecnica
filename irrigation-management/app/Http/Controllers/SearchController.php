@@ -26,6 +26,10 @@ class SearchController extends Controller
         $client = Client::findOrFail($clientId)->first();
         $searchModel = $request->input('search');
 
+        if($request->input('search') !== 'a' || $request->input('search') !== 'b' || $request->input('search') !== 'c' ){
+            $modelExists = false;
+        }
+
         $irrigations = Client::findOrFail($clientId)
                         ->irrigations()
                         ->where('model', 'LIKE', '%' . $searchModel . '%')
@@ -35,7 +39,7 @@ class SearchController extends Controller
             $irrigations = null;
         }
 
-        return view('irrigations.found', ['irrigations' => $irrigations, 'client' => $client, 'model' => $searchModel]);
+        return view('irrigations.found', ['irrigations' => $irrigations, 'client' => $client, 'model' => $searchModel, 'model_exists' => $modelExists]);
     }
 
 }

@@ -28,7 +28,11 @@
             </tbody>
         </table>
     @else
-        <p class="clients-not-found">No hay programadores de riego del modelo "{{ $model }}" asociados a {{ $client->name }}.</p>
+        @if(!$model_exists)
+            <p class="clients-not-found">No existen programadores de riego del modelo "{{ $model }}" en el sistema.</p>
+        @else
+            <p class="clients-not-found">No hay programadores de riego del modelo "{{ $model }}" asociados a {{ $client->name }}.</p>
+        @endif
     @endif
 
     <x-link url="{{ url()->previous() }}">Volver</x-link>
