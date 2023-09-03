@@ -19,7 +19,11 @@
             <tbody>
                 @foreach($irrigations as $irrigation)
                 <tr>
-                    <td>{{ $irrigation->model }}</td>
+                    <td>
+                        <a class="client-link" href="{{ route('measures.show', $irrigation->id) }}">
+                            {{ $irrigation->model }}
+                        </a>
+                    </td>
                     <td>{{ $irrigation->serial_number }}</td>
                     <td>{{ $irrigation->registration_date }}</td>
                     <td>{{ $irrigation->last_connection }}</td>
