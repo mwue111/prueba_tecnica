@@ -22,10 +22,10 @@ class SearchController extends Controller
     }
 
     public function searchIrrigation(Request $request) {
-        $modelExists = true;
         $clientId = $request->input('client_id');
-        $client = Client::findOrFail($clientId);
         $searchModel = $request->input('search');
+        $client = Client::findOrFail($clientId);
+        $modelExists = true;
 
         $irrigations = Client::findOrFail($clientId)
                         ->irrigations()

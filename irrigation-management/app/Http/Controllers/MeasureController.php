@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Measure;
+use App\Models\Irrigation;
 
 class MeasureController extends Controller
 {
@@ -35,9 +36,13 @@ class MeasureController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show($id)
     {
-        //
+        $measures = Irrigation::findOrFail($id)->sensors()->where('irrigation_id', '=', $id)->with('measures')->get();
+        // dd($sensor);
+        //coger de la tabla pivote measures los registros que correspondan a todos los sensores
+        return view('measures.show', ['measures' => $measures]);
+
     }
 
     /**

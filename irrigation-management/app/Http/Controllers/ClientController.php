@@ -56,7 +56,7 @@ class ClientController extends Controller
     public function show(string $id)
     {
         $client = client::findOrFail($id);
-        $irrigations = $client->irrigations;
+        $irrigations = $client->irrigations()->paginate(10);
 
         if(!$irrigations->count()){
             $irrigations = null;

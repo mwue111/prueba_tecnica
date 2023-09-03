@@ -41,6 +41,7 @@ Route::get('/sonda', [SensorController::class, 'index'])->name('sensors.index');
 
 //medidas de las sondas
 Route::get('/medidas-sondas', [MeasureController::class, 'index'])->name('measures.index');
+Route::get('/medidas/{id}', [MeasureController::class, 'show'])->name('measures.show');
 
 //autenticación
 Route::get('/dashboard', function () {

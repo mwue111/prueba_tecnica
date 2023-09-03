@@ -16,9 +16,6 @@ class Irrigation extends Model
         'last_connection',
     ];
 
-    //función para búsqueda
-
-
     //funciones para relacionarlo con clientes
     public function client() {
         return $this->belongsTo(Client::class);

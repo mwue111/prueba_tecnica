@@ -28,5 +28,133 @@ class SensorsTableSeeder extends Seeder
         DB::table('sensors')->insert([
             'name' => 'S4',
         ]);
+
+        DB::table('sensors')->insert([
+            'name' => 'S1',
+        ]);
+
+        DB::table('sensors')->insert([
+            'name' => 'S2',
+        ]);
+
+        DB::table('sensors')->insert([
+            'name' => 'S3',
+        ]);
+
+        DB::table('sensors')->insert([
+            'name' => 'S4',
+        ]);
+
+        DB::table('sensors')->insert([
+            'name' => 'S1',
+        ]);
+
+        DB::table('sensors')->insert([
+            'name' => 'S2',
+        ]);
+
+        DB::table('sensors')->insert([
+            'name' => 'S3',
+        ]);
+
+        DB::table('sensors')->insert([
+            'name' => 'S4',
+        ]);
+
+        DB::table('sensors')->insert([
+            'name' => 'S1',
+        ]);
+
+        DB::table('sensors')->insert([
+            'name' => 'S2',
+        ]);
+
+        DB::table('sensors')->insert([
+            'name' => 'S3',
+        ]);
+
+        DB::table('sensors')->insert([
+            'name' => 'S4',
+        ]);
+
+        DB::table('sensors')->insert([
+            'name' => 'S1',
+        ]);
+
+        DB::table('sensors')->insert([
+            'name' => 'S2',
+        ]);
+
+        DB::table('sensors')->insert([
+            'name' => 'S3',
+        ]);
+
+        DB::table('sensors')->insert([
+            'name' => 'S4',
+        ]);
+
+        DB::table('sensors')->insert([
+            'name' => 'S1',
+        ]);
+
+        DB::table('sensors')->insert([
+            'name' => 'S2',
+        ]);
+
+        DB::table('sensors')->insert([
+            'name' => 'S3',
+        ]);
+
+        DB::table('sensors')->insert([
+            'name' => 'S4',
+        ]);
+
+        DB::table('sensors')->insert([
+            'name' => 'S1',
+        ]);
+
+        DB::table('sensors')->insert([
+            'name' => 'S2',
+        ]);
+
+        DB::table('sensors')->insert([
+            'name' => 'S3',
+        ]);
+
+        DB::table('sensors')->insert([
+            'name' => 'S4',
+        ]);
+
+        DB::table('sensors')->insert([
+            'name' => 'S1',
+        ]);
+
+        DB::table('sensors')->insert([
+            'name' => 'S2',
+        ]);
+
+        DB::table('sensors')->insert([
+            'name' => 'S3',
+        ]);
+
+        DB::table('sensors')->insert([
+            'name' => 'S4',
+        ]);
+
+        DB::table('sensors')->insert([
+            'name' => 'S1',
+        ]);
+
+        DB::table('sensors')->insert([
+            'name' => 'S2',
+        ]);
+
+        DB::table('sensors')->insert([
+            'name' => 'S3',
+        ]);
+
+        DB::table('sensors')->insert([
+            'name' => 'S4',
+        ]);
     }
 }
