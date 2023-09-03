@@ -2,8 +2,10 @@
 
     @if($measures)
 
-    <h1>Cliente {{ $client->name }}</h1>
-    <h2>Datos de la sonda modelo {{ $model }}</h2>
+    <div class="title-container">
+        <h1 id="client-name">Cliente {{ $client->name }}</h1>
+        <h2 id="sensor-name">Datos de la sonda modelo {{ $model }}</h2>
+    </div>
 
     <table class="table table-hover">
         <thead>

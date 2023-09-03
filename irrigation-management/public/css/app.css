@@ -86,10 +86,23 @@ table{
 }
 
 #edit-client-title,
-#create-client-title{
+#create-client-title,
+#client-name{
     font-size: 30px;
     font-weight: bolder;
     color: #569db3;
+}
+
+#sensor-name{
+    font-size: 20px;
+    font-weight: bolder;
+    color: #569db3;
+}
+
+.title-container{
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0;
 }
 
 .clients-not-found{
