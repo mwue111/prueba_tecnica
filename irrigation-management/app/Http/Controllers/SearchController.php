@@ -22,13 +22,10 @@ class SearchController extends Controller
     }
 
     public function searchIrrigation(Request $request) {
+        $modelExists = true;
         $clientId = $request->input('client_id');
-        $client = Client::findOrFail($clientId)->first();
+        $client = Client::findOrFail($clientId);
         $searchModel = $request->input('search');
-
-        if($request->input('search') !== 'a' || $request->input('search') !== 'b' || $request->input('search') !== 'c' ){
-            $modelExists = false;
-        }
 
         $irrigations = Client::findOrFail($clientId)
                         ->irrigations()
@@ -39,7 +36,16 @@ class SearchController extends Controller
             $irrigations = null;
         }
 
-        return view('irrigations.found', ['irrigations' => $irrigations, 'client' => $client, 'model' => $searchModel, 'model_exists' => $modelExists]);
+        if($searchModel !== "a" && $searchModel !== "b" && $searchModel !== "c"){
+            $modelExists = false;
+        }
+
+        return view('irrigations.found', [
+            'irrigations' => $irrigations,
+            'client' => $client,
+            'model' => $searchModel,
+            'model_exists' => $modelExists,
+        ]);
     }
 
 }
