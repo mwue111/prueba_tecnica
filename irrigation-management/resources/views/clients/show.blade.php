@@ -11,10 +11,10 @@
     <table class="table table-hover">
         <thead>
             <tr>
-            <th scope="col">Modelo</th>
-            <th scope="col">Número de serie</th>
-            <th scope="col">Fecha de registro</th>
-            <th scope="col">Última conexión</th>
+                <th scope="col">Modelo</th>
+                <th scope="col">Número de serie</th>
+                <th scope="col">Fecha de registro</th>
+                <th scope="col">Última conexión</th>
             </tr>
         </thead>
         <tbody>

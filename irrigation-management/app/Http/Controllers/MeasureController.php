@@ -38,10 +38,16 @@ class MeasureController extends Controller
      */
     public function show($id)
     {
-        $measures = Irrigation::findOrFail($id)->sensors()->where('irrigation_id', '=', $id)->with('measures')->get();
-        // dd($sensor);
-        //coger de la tabla pivote measures los registros que correspondan a todos los sensores
-        return view('measures.show', ['measures' => $measures]);
+        $model = Irrigation::findOrFail($id)->model;
+        $client = Irrigation::findOrFail($id)->client;
+
+        $measures = Irrigation::findOrFail($id)
+                    ->sensors()
+                    ->where('irrigation_id', '=', $id)
+                    ->with('measures')
+                    ->paginate(10);
+
+        return view('measures.show', ['measures' => $measures, 'model' => $model, 'client' => $client]);
 
     }
 
