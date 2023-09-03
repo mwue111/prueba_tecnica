@@ -1,7 +1,7 @@
 <x-layout>
     <x-search
             route="irrigation.search"
-            param="{{ $client_id }}"
+            param="{{ $client->id }}"
             title="programadores de riego"
             suggestion="Modelo"
     />
@@ -28,7 +28,7 @@
             </tbody>
         </table>
     @else
-        <p>No hay programadores de riego de ese modelo asociados a {{ $client->name }}</p>
+        <p class="clients-not-found">No hay programadores de riego del modelo "{{ $model }}" asociados a {{ $client->name }}.</p>
     @endif
 
     <x-link url="{{ url()->previous() }}">Volver</x-link>

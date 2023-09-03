@@ -23,6 +23,7 @@ class SearchController extends Controller
 
     public function searchIrrigation(Request $request) {
         $clientId = $request->input('client_id');
+        $client = Client::findOrFail($clientId)->first();
         $searchModel = $request->input('search');
 
         $irrigations = Client::findOrFail($clientId)
@@ -34,7 +35,7 @@ class SearchController extends Controller
             $irrigations = null;
         }
 
-        return view('irrigations.found', ['irrigations' => $irrigations, 'client_id' => $clientId]);
+        return view('irrigations.found', ['irrigations' => $irrigations, 'client' => $client, 'model' => $searchModel]);
     }
 
 }

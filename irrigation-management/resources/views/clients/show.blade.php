@@ -29,7 +29,7 @@
         </tbody>
     </table>
     @else
-        <p>No hay programadores de riego asociados a {{ $client->name }}.</p>
+        <p class="clients-not-found">No hay programadores de riego asociados a {{ $client->name }}.</p>
     @endif
 
     <x-link url="{{ url()->previous() }}">Volver</x-link>
