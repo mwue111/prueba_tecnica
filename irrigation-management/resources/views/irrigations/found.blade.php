@@ -40,5 +40,4 @@
     @endif
 
     <x-link url="{{ url()->previous() }}">Volver</x-link>
-
 </x-layout>

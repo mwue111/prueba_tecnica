@@ -62,7 +62,10 @@ class ClientController extends Controller
             $irrigations = null;
         }
 
-        return view('clients.show', ['client' => $client, 'irrigations' => $irrigations]);
+        return view('clients.show', [
+            'client' => $client,
+            'irrigations' => $irrigations
+        ]);
     }
 
     /**

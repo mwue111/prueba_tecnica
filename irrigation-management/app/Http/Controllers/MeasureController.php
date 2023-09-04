@@ -47,7 +47,11 @@ class MeasureController extends Controller
                     ->with('measures')
                     ->paginate(10);
 
-        return view('measures.show', ['measures' => $measures, 'model' => $model, 'client' => $client]);
+        return view('measures.show', [
+            'measures' => $measures,
+            'model' => $model,
+            'client' => $client
+        ]);
 
     }
 

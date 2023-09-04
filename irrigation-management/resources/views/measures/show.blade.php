@@ -1,4 +1,10 @@
 <x-layout>
+    <x-search
+            route="irrigation.search"
+            param="{{ $client->id }}"
+            title="programadores de riego"
+            suggestion="Modelo"
+    />
 
     @if($measures)
 
@@ -27,9 +33,9 @@
     </table>
 
     {{ $measures->links() }}
+
     @else
-        <p clas="clients-not-found">No hay datos</p>
+        <p clas="clients-not-found">No hay datos.</p>
     @endif
 
-    <x-link url="{{ url()->previous() }}">Volver</x-link>
 </x-layout>
