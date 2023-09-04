@@ -2,6 +2,17 @@ a, a:hover{
     text-decoration: none;
 }
 
+.welcome-card{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#logo{
+    width: 100px;
+    height: 100px;
+}
+
 .message{
     position: absolute;
     z-index: 99;
@@ -97,6 +108,7 @@ table{
     justify-content: space-between;
 }
 
+#welcome,
 #client-title,
 #edit-client-title,
 #create-client-title,

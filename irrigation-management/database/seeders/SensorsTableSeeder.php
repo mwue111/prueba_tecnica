@@ -156,5 +156,6 @@ class SensorsTableSeeder extends Seeder
         DB::table('sensors')->insert([
             'name' => 'S4',
         ]);
+
     }
 }

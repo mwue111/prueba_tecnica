@@ -192,6 +192,26 @@ class MeasureSensorTableSeeder extends Seeder
             'measure_id' => 36,
             'sensor_id' => 36,
         ]);
+        //otras medidas del cliente 1
+         DB::table('measure_sensor')->insert([
+            'measure_id' => 37,
+            'sensor_id' => 1,
+        ]);
+
+        DB::table('measure_sensor')->insert([
+            'measure_id' => 38,
+            'sensor_id' => 2,
+        ]);
+
+        DB::table('measure_sensor')->insert([
+            'measure_id' => 39,
+            'sensor_id' => 3,
+        ]);
+
+        DB::table('measure_sensor')->insert([
+            'measure_id' => 40,
+            'sensor_id' => 4,
+        ]);
 
     }
 }

@@ -8,6 +8,9 @@ use App\Models\Irrigation;
 
 class MeasureController extends Controller
 {
+    public function __construct() {
+        $this->middleware('auth');
+    }
     /**
      * Display a listing of the resource.
      */
@@ -43,9 +46,18 @@ class MeasureController extends Controller
 
         $measures = Irrigation::findOrFail($id)
                     ->sensors()
-                    ->where('irrigation_id', '=', $id)
-                    ->with('measures')
-                    ->paginate(10);
+                    // ->where('irrigation_id', '=', $id)
+                    // ->with('measures')
+                    ->paginate(2);
+                    // ->get();
+
+        // $measures = [];
+        // foreach($sensors as $sensor){
+        //     foreach($sensor->measures as $measure)
+        //     $measures[] = $measure;
+        // }
+
+        // dd($measures);
 
         return view('measures.show', [
             'measures' => $measures,

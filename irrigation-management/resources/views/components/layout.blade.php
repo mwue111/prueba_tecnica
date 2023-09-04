@@ -22,7 +22,7 @@
     <div class="container">
         <!-- barra navegación -->
         <nav class="navbar navbar-light bg-light">
-            <a class="navbar-brand" href="{{route('clients.index')}}">
+            <a  href="{{route('clients.index')}}">
                 <div class="home-container">
                     <img
                         id="home"
@@ -31,6 +31,17 @@
                     >
                 </div>
             </a>
+
+            @auth
+            <form method="POST" action="{{ route('logout') }}">
+                @csrf
+                <x-dropdown-link :href="route('logout')"
+                                    onclick="event.preventDefault();
+                                                this.closest('form').submit();">
+                                {{ __('Cerrar sesión') }}
+                </x-dropdown-link>
+            </form>
+            @endauth
         </nav>
 
         {{ $slot }}

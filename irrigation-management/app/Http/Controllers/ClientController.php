@@ -6,9 +6,14 @@ use Illuminate\Http\Request;
 use App\Models\Client;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Str;
+use Illuminate\Support\Facades\Auth;
 
 class ClientController extends Controller
 {
+
+    public function __construct() {
+        $this->middleware('auth');
+    }
     /**
      * Display a listing of the resource.
      */

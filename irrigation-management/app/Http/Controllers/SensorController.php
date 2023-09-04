@@ -8,6 +8,10 @@ use App\Models\Measure;
 
 class SensorController extends Controller
 {
+    public function __construct() {
+        $this->middleware('auth');
+    }
+
     public function index() {
         $sensors = Sensor::get();
         return $sensors;

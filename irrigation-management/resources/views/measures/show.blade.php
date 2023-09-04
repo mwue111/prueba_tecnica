@@ -23,14 +23,27 @@
             </tr>
         </thead>
         <tbody>
-            @foreach($measures as $measure)
+
+        {{-- con array[8]: @foreach($measures as $measure)
             <tr>
-                <td>{{ $measure->measures[0]->sensor_name }}</td>
-                <td>{{ $measure->measures[0]->measurement_value }}</td>
-                <td>{{ \Carbon\Carbon::parse($measure->measures[0]->measurement_date)->format('d-m-Y') }}</td>
-                <td>{{ \Carbon\Carbon::parse($measure->measures[0]->measurement_date)->format('H:i') }}</td>
+                <td>{{$measure->sensor_name}}</td>
+                <td>{{$measure->measurement_value}}</td>
+                <td>{{ \Carbon\Carbon::parse($measure->measurement_date)->format('d-m-Y') }}</td>
+                <td>{{ \Carbon\Carbon::parse($measure->measurement_date)->format('H:i') }}</td>
             </tr>
+        @endforeach--}}
+
+        @foreach($measures as $measure)
+            @foreach($measure->measures as $m)
+                <tr>
+                    <td>{{ $m->sensor_name }}</td>
+                    <td>{{ $m->measurement_value }}</td>
+                    <td>{{ \Carbon\Carbon::parse($m->measurement_date)->format('d-m-Y') }}</td>
+                    <td>{{ \Carbon\Carbon::parse($m->measurement_date)->format('H:i') }}</td>
+                </tr>
             @endforeach
+        @endforeach
+
         </tbody>
     </table>
 

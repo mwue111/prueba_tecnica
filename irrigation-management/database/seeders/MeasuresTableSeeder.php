@@ -40,25 +40,25 @@ class MeasuresTableSeeder extends Seeder
 
         DB::table('measures')->insert([
             'sensor_name' => 'S1',
-            'measurement_date' => Carbon::now()->subMinutes(5),
+            'measurement_date' => Carbon::yesterday()->addMinutes(5),
             'measurement_value' => 11.08,
         ]);
 
         DB::table('measures')->insert([
             'sensor_name' => 'S2',
-            'measurement_date' => Carbon::now()->subMinutes(10),
+            'measurement_date' => new Carbon('2023-09-01 11:53'),
             'measurement_value' => 11.84,
         ]);
 
         DB::table('measures')->insert([
             'sensor_name' => 'S3',
-            'measurement_date' => Carbon::now(),
+            'measurement_date' => new Carbon('2023-07-10 21:00'),
             'measurement_value' => 80.12,
         ]);
 
         DB::table('measures')->insert([
             'sensor_name' => 'S4',
-            'measurement_date' => Carbon::now()->subMinutes(5),
+            'measurement_date' => new Carbon('2023-05-01 08:20'),
             'measurement_value' => 80.05,
         ]);
 
@@ -228,6 +228,31 @@ class MeasuresTableSeeder extends Seeder
             'sensor_name' => 'S4',
             'measurement_date' => Carbon::now()->subMinutes(10),
             'measurement_value' => 12.13,
+        ]);
+
+        //otras medidas del cliente 1
+        DB::table('measures')->insert([
+            'sensor_name' => 'S1',
+            'measurement_date' => new Carbon('2023-09-01 11:53'),
+            'measurement_value' => 21.00,
+        ]);
+
+        DB::table('measures')->insert([
+            'sensor_name' => 'S2',
+            'measurement_date' => new Carbon('2023-06-01 12:50'),
+            'measurement_value' => 22.00,
+        ]);
+
+        DB::table('measures')->insert([
+            'sensor_name' => 'S3',
+            'measurement_date' => new Carbon('2022-11-01 21:12'),
+            'measurement_value' => 23.00,
+        ]);
+
+        DB::table('measures')->insert([
+            'sensor_name' => 'S4',
+            'measurement_date' => new Carbon('2022-12-20 08:54'),
+            'measurement_value' => 24.00,
         ]);
 
     }

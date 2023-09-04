@@ -192,6 +192,25 @@ class IrrigationSensorTableSeeder extends Seeder
             'irrigation_id' => 9,
             'sensor_id' => 36,
         ]);
+        //otras medidas del cliente 1
+        // DB::table('irrigation_sensor')->insert([
+        //     'irrigation_id' => 1,
+        //     'sensor_id' => 1,
+        // ]);
 
+        // DB::table('irrigation_sensor')->insert([
+        //     'irrigation_id' => 1,
+        //     'sensor_id' => 2,
+        // ]);
+
+        // DB::table('irrigation_sensor')->insert([
+        //     'irrigation_id' => 1,
+        //     'sensor_id' => 3,
+        // ]);
+
+        // DB::table('irrigation_sensor')->insert([
+        //     'irrigation_id' => 1,
+        //     'sensor_id' => 4,
+        // ]);
     }
 }
