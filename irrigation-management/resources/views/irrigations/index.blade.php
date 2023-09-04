@@ -8,16 +8,9 @@
     />
 
     @if($irrigations)
-    <div class="show-header mb-4">
-        <div class="title-container">
-            <h1 id="client-title">Cliente {{ $client->name }}</h1>
-            <h2 id="client-subtitle">Programadores de riego asociados</h2>
-        </div>
-
-        <form action="{{ route('irrigations.active', $client->id) }}" method="GET">
-        @csrf
-            <x-form.button class="bg-info text-white uppercase font-semibold text-xs py-3 px-10 rounded-2xl hover:bg-blue-600">Filtrar programadores activos</x-form>
-        </form>
+    <div class="title-container">
+        <h1 id="active-irrigation">Cliente {{ $client->name }}</h1>
+        <h2 id="active-irrigation-subtitle" class="mb-4">Programadores activos</h2>
     </div>
 
     <table class="table table-hover">
@@ -46,9 +39,8 @@
     </table>
 
     {{ $irrigations->links() }}
-
     @else
-        <p class="clients-not-found">No hay programadores de riego asociados a {{ $client->name }}.</p>
+    <p>No hay ningún programador de riego activo actualmente.</p>
     @endif
 
     <x-link url="{{ url()->previous() }}">Volver</x-link>

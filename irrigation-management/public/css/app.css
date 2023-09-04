@@ -28,6 +28,11 @@ a, a:hover{
     background-color: rgb(224, 224, 224);
 }
 
+.client-show-header{
+    display: flex;
+    justify-content: center;
+}
+
 .search-container{
     padding: 10px;
     display: flex;
@@ -85,7 +90,8 @@ table{
     color: #478294;
 }
 
-.index-header{
+.index-header,
+.show-header{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -94,14 +100,16 @@ table{
 #client-title,
 #edit-client-title,
 #create-client-title,
-#client-name{
+#client-name,
+#active-irrigation{
     font-size: 30px;
     font-weight: bolder;
     color: #569db3;
 }
 
 #client-subtitle,
-#sensor-name{
+#sensor-name,
+#active-irrigation-subtitle{
     font-size: 20px;
     font-weight: bolder;
     color: #569db3;
@@ -110,7 +118,6 @@ table{
 .title-container{
     display: flex;
     flex-direction: column;
-    margin: 20px 0;
 }
 
 .clients-not-found{

@@ -16,7 +16,7 @@
 
         @if($clients)
         <div class="index-header">
-            <h1 id="client-title">Lista de clientes</h1>
+            <h1 id="client-title">Clientes</h1>
 
             <form id="add-client-form" class="mb-4" action="{{ route('client.create') }}" method="GET">
             @csrf

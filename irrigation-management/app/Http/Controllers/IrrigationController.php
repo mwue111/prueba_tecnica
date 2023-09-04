@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Irrigation;
+use App\Models\Client;
 
 class IrrigationController extends Controller
 {
@@ -14,6 +15,21 @@ class IrrigationController extends Controller
     {
         $irrigations = Irrigation::get();
         return $irrigations;
+    }
+
+    public function active($id){
+        $client = Client::findOrFail($id);
+        $allIrrigations = $client->irrigations;
+
+        $irrigations = Irrigation::filter([
+            'irrigations' => $allIrrigations->toArray(),
+            'client_id' => $client->id
+            ])->paginate(10);
+
+        return view('irrigations.index', [
+            'irrigations' => $irrigations,
+            'client' => $client
+        ]);
     }
 
     /**
