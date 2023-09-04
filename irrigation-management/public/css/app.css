@@ -85,6 +85,13 @@ table{
     color: #478294;
 }
 
+.index-header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#client-title,
 #edit-client-title,
 #create-client-title,
 #client-name{
@@ -93,6 +100,7 @@ table{
     color: #569db3;
 }
 
+#client-subtitle,
 #sensor-name{
     font-size: 20px;
     font-weight: bolder;

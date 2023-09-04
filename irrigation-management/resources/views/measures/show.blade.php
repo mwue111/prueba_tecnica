@@ -19,6 +19,7 @@
                 <th scope="col">Nombre de la sonda</th>
                 <th scope="col">Valor de la medida</th>
                 <th scope="col">Fecha de la medida</th>
+                <th scope="col">Hora de la medida</th>
             </tr>
         </thead>
         <tbody>
@@ -26,7 +27,8 @@
             <tr>
                 <td>{{ $measure->measures[0]->sensor_name }}</td>
                 <td>{{ $measure->measures[0]->measurement_value }}</td>
-                <td>{{ $measure->measures[0]->measurement_date }}</td>
+                <td>{{ \Carbon\Carbon::parse($measure->measures[0]->measurement_date)->format('d-m-Y') }}</td>
+                <td>{{ \Carbon\Carbon::parse($measure->measures[0]->measurement_date)->format('H:i') }}</td>
             </tr>
             @endforeach
         </tbody>
@@ -38,4 +40,5 @@
         <p clas="clients-not-found">No hay datos.</p>
     @endif
 
+    <x-link url="{{ url()->previous() }}">Volver</x-link>
 </x-layout>

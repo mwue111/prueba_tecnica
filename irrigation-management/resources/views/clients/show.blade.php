@@ -8,6 +8,11 @@
     />
 
     @if($irrigations)
+    <div class="title-container">
+        <h1 id="client-title">Cliente {{ $client->name }}</h1>
+        <h2 id="client-subtitle">Programadores de riego asociados</h2>
+    </div>
+
     <table class="table table-hover">
         <thead>
             <tr>
@@ -26,8 +31,8 @@
                     </a>
                 </td>
                 <td>{{ $irrigation->serial_number }}</td>
-                <td>{{ $irrigation->registration_date }}</td>
-                <td>{{ $irrigation->last_connection }}</td>
+                <td>{{ \Carbon\Carbon::parse($irrigation->registration_date)->format('d-m-Y') }}</td>
+                <td>{{ \Carbon\Carbon::parse($irrigation->last_connection)->format('d-m-Y') }}</td>
             </tr>
             @endforeach
         </tbody>

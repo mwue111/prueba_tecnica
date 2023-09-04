@@ -15,11 +15,14 @@
         />
 
         @if($clients)
+        <div class="index-header">
+            <h1 id="client-title">Lista de clientes</h1>
 
-        <form id="add-client-form" class="mb-4" action="{{ route('client.create') }}" method="GET">
-        @csrf
-            <x-form.button class="bg-info text-white uppercase font-semibold text-xs py-3 px-10 rounded-2xl hover:bg-blue-600">Añadir cliente</x-form>
-        </form>
+            <form id="add-client-form" class="mb-4" action="{{ route('client.create') }}" method="GET">
+            @csrf
+                <x-form.button class="bg-info text-white uppercase font-semibold text-xs py-3 px-10 rounded-2xl hover:bg-blue-600">Añadir cliente</x-form>
+            </form>
+        </div>
 
         <table class="table table-hover">
             <thead>
@@ -45,8 +48,8 @@
                         <td>{{ $client->address }}</td>
                         <td>{{ $client->city }}</td>
                         <td>{{ $client->town }}</td>
-                        <td>{{ $client->start_contract }}</td>
-                        <td>{{ $client->end_contract }}</td>
+                        <td>{{ \Carbon\Carbon::parse($client->start_contract)->format('d-m-Y') }}</td>
+                        <td>{{ \Carbon\Carbon::parse($client->end_contract)->format('d-m-Y') }}</td>
                         <td>
                             <form action="{{ route('client.edit', $client->id) }}" method="GET">
                             @csrf
