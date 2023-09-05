@@ -4,158 +4,22 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use App\Models\Client;
+use App\Models\Irrigation;
+use App\Models\Sensor;
 use DB;
 
 class SensorsTableSeeder extends Seeder
 {
-    /**
-     * Run the database seeds.
-     */
     public function run(): void
     {
-        DB::table('sensors')->insert([
-            'name' => 'S1',
-        ]);
+        $irrigations = Irrigation::all();
 
-        DB::table('sensors')->insert([
-            'name' => 'S2',
-        ]);
-
-        DB::table('sensors')->insert([
-            'name' => 'S3',
-        ]);
-
-        DB::table('sensors')->insert([
-            'name' => 'S4',
-        ]);
-
-        DB::table('sensors')->insert([
-            'name' => 'S1',
-        ]);
-
-        DB::table('sensors')->insert([
-            'name' => 'S2',
-        ]);
-
-        DB::table('sensors')->insert([
-            'name' => 'S3',
-        ]);
-
-        DB::table('sensors')->insert([
-            'name' => 'S4',
-        ]);
-
-        DB::table('sensors')->insert([
-            'name' => 'S1',
-        ]);
-
-        DB::table('sensors')->insert([
-            'name' => 'S2',
-        ]);
-
-        DB::table('sensors')->insert([
-            'name' => 'S3',
-        ]);
-
-        DB::table('sensors')->insert([
-            'name' => 'S4',
-        ]);
-
-        DB::table('sensors')->insert([
-            'name' => 'S1',
-        ]);
-
-        DB::table('sensors')->insert([
-            'name' => 'S2',
-        ]);
-
-        DB::table('sensors')->insert([
-            'name' => 'S3',
-        ]);
-
-        DB::table('sensors')->insert([
-            'name' => 'S4',
-        ]);
-
-        DB::table('sensors')->insert([
-            'name' => 'S1',
-        ]);
-
-        DB::table('sensors')->insert([
-            'name' => 'S2',
-        ]);
-
-        DB::table('sensors')->insert([
-            'name' => 'S3',
-        ]);
-
-        DB::table('sensors')->insert([
-            'name' => 'S4',
-        ]);
-
-        DB::table('sensors')->insert([
-            'name' => 'S1',
-        ]);
-
-        DB::table('sensors')->insert([
-            'name' => 'S2',
-        ]);
-
-        DB::table('sensors')->insert([
-            'name' => 'S3',
-        ]);
-
-        DB::table('sensors')->insert([
-            'name' => 'S4',
-        ]);
-
-        DB::table('sensors')->insert([
-            'name' => 'S1',
-        ]);
-
-        DB::table('sensors')->insert([
-            'name' => 'S2',
-        ]);
-
-        DB::table('sensors')->insert([
-            'name' => 'S3',
-        ]);
-
-        DB::table('sensors')->insert([
-            'name' => 'S4',
-        ]);
-
-        DB::table('sensors')->insert([
-            'name' => 'S1',
-        ]);
-
-        DB::table('sensors')->insert([
-            'name' => 'S2',
-        ]);
-
-        DB::table('sensors')->insert([
-            'name' => 'S3',
-        ]);
-
-        DB::table('sensors')->insert([
-            'name' => 'S4',
-        ]);
-
-        DB::table('sensors')->insert([
-            'name' => 'S1',
-        ]);
-
-        DB::table('sensors')->insert([
-            'name' => 'S2',
-        ]);
-
-        DB::table('sensors')->insert([
-            'name' => 'S3',
-        ]);
-
-        DB::table('sensors')->insert([
-            'name' => 'S4',
-        ]);
-
+        foreach($irrigations as $irrigation) {
+            Sensor::factory()->create(['name' => 'S1']);
+            Sensor::factory()->create(['name' => 'S2']);
+            Sensor::factory()->create(['name' => 'S3']);
+            Sensor::factory()->create(['name' => 'S4']);
+        }
     }
 }
