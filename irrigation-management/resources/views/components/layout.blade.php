@@ -35,7 +35,7 @@
             @auth
             <form method="POST" action="{{ route('logout') }}">
                 @csrf
-                <x-dropdown-link :href="route('logout')"
+                <x-dropdown-link class="logout" :href="route('logout')"
                                     onclick="event.preventDefault();
                                                 this.closest('form').submit();">
                                 {{ __('Cerrar sesión') }}

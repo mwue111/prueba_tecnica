@@ -19,40 +19,31 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
-
-//clientes
-Route::get('/', [ClientController::class, 'index'])->name('clients.index');
-Route::get('/cliente/{id}', [ClientController::class, 'show'])->name('client.show');
-Route::get('/editar-cliente/{id}', [ClientController::class, 'edit'])->name('client.edit');
-Route::put('/actualizar-cliente/{id}', [ClientController::class, 'update'])->name('client.update');
-Route::get('/crear-cliente', [ClientController::class, 'create'])->name('client.create');
-Route::post('/guardar-cliente', [ClientController::class, 'store'])->name('client.store');
-Route::get('/buscar-cliente', [SearchController::class, 'search'])->name('client.search');
-
-//programadores de riego
-Route::get('/riego', [IrrigationController::class, 'index'])->name('irrigations.index');
-Route::get('/buscar-riego', [SearchController::class, 'searchIrrigation'])->name('irrigation.search');
-Route::get('/activos/{id}', [IrrigationController::class, 'active'])->name('irrigations.active');
-
-//sensores/sondas
-Route::get('/sonda', [SensorController::class, 'index'])->name('sensors.index');
-
-//medidas de las sondas
-Route::get('/medidas-sondas', [MeasureController::class, 'index'])->name('measures.index');
-Route::get('/medidas/{id}', [MeasureController::class, 'show'])->name('measures.show');
-
-//autenticación
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
-
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+    Route::get('/', [ClientController::class, 'index'])->name('clients.index');
+
+    //clientes
+    Route::get('/cliente/{id}', [ClientController::class, 'show'])->name('client.show');
+    Route::get('/editar-cliente/{id}', [ClientController::class, 'edit'])->name('client.edit');
+    Route::put('/actualizar-cliente/{id}', [ClientController::class, 'update'])->name('client.update');
+    Route::get('/crear-cliente', [ClientController::class, 'create'])->name('client.create');
+    Route::post('/guardar-cliente', [ClientController::class, 'store'])->name('client.store');
+    Route::get('/buscar-cliente', [SearchController::class, 'search'])->name('client.search');
+
+    //programadores de riego
+    Route::get('/riego', [IrrigationController::class, 'index'])->name('irrigations.index');
+    Route::get('/buscar-riego', [SearchController::class, 'searchIrrigation'])->name('irrigation.search');
+    Route::get('/activos/{id}', [IrrigationController::class, 'active'])->name('irrigations.active');
+
+    //sensores/sondas
+    Route::get('/sonda', [SensorController::class, 'index'])->name('sensors.index');
+
+    //medidas de las sondas
+    Route::get('/medidas-sondas', [MeasureController::class, 'index'])->name('measures.index');
+    Route::get('/medidas/{id}', [MeasureController::class, 'show'])->name('measures.show');
 });
 
 require __DIR__.'/auth.php';

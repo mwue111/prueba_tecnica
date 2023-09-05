@@ -13,6 +13,67 @@ a, a:hover{
     height: 100px;
 }
 
+.login-card{
+    background-color: #569db3;
+}
+
+.email-login,
+.pass-login{
+    font-size: 20px;
+    margin: 25px 0 15px 0;
+    color: white;
+}
+
+.checkbox-login{
+    border-color: #3a6b7a;
+    color: #478294;
+}
+
+.checkbox-login:focus{
+    border-color: #478294;
+}
+
+div .registration-login{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.registration-login{
+    color: white;
+    font-size: 20px;
+    background-color: white;
+    color: #3a6b7a;
+    padding: 15px;
+    border-radius: 15px;
+}
+
+.registration-login:hover,
+.login-button:hover{
+    background: #3a6b7ac7;
+    color: white;
+}
+
+.login-button{
+    background-color: white;
+    color: #3a6b7a;
+    padding: 10px;
+    margin-left: 15px;
+    border-radius: 10px;
+
+}
+
+.logout:hover{
+    color: #3a6b7a;
+}
+
+.error-form{
+    background-color: white;
+    border-radius: 10px;
+    padding: 5px;
+    text-align: center;
+}
+
 .message{
     position: absolute;
     z-index: 99;
