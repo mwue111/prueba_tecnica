@@ -11,7 +11,7 @@
 #### Estructura de la base de datos
 El diagrama entidad-relación de la base de datos de la aplicación es la siguiente:
 
-![Base de datos](/irrigation-management/public/assets/images/Irrigation.jpg)
+![Base de datos](../Irrigation.jpg)
 
 ##### Credenciales
 
@@ -50,3 +50,5 @@ La aplicación permite la creación de un usuario mediante correo electrónico y
 
 - email: admin@admin.com
 - contraseña: 12345678
+
+**Importante**: Puesto que los datos se generan de manera aleatoria, es probable que no se pueda comprobar el filtro de programadores de riego activos. Para ello, bastará con modificar el campo *measurement_date* de la tabla *measures* de cualquier registro para que cumpla con los requisitos necesarios.
