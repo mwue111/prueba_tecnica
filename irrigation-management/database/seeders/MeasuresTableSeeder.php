@@ -19,7 +19,7 @@ class MeasuresTableSeeder extends Seeder
         $index = 0;
 
         foreach($sensors as $sensor){
-            for($i = 0; $i < 1000; $i++){
+            for($i = 0; $i < 10; $i++){
                 Measure::factory()->create(['sensor_name' => $sensorNames[$index], 'measurement_date' => $date->addMinutes(5)]);
 
                 $index++;
